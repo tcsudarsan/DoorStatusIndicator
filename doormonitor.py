@@ -16,10 +16,6 @@ def measure_distance():
     time.sleep(0.00001)  # Wait for 10 microseconds
     GPIO.output(GPIO_TRIGGER, False)
 
-    # Record the start and stop times
-    start_time = time.time()  # Initialize start_time
-    stop_time = time.time()  # Initialize stop_time
-
     # Save start time when the ECHO pin goes HIGH
     while GPIO.input(GPIO_ECHO) == 0:
         start_time = time.time()
